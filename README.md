@@ -10,7 +10,7 @@ Sorin Theme is a [Sorin](https://github.com/seulibrary/Sorin) extension that pro
 def deps do
   [
     ...,
-    {:sorin_theme, path: "GITHUB_LINK"},
+    {:sorin_theme, git: "https://github.com/seulibrary/Sorin-Theme.git"},
   ]
 end
 ```
