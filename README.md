@@ -34,11 +34,10 @@ $ mix setup_extension SorinTheme
 ## Customization
 
 ### High-level break down
-```
-NOTE: This extensions expects you to clone it and to edit it directly to be your own.
-```
 
-The core files of this extension are as follow in this diagram:
+**Note:** This extensions expects you to clone it and to edit it directly to be your own.
+
+The following are the core files of this extension:
 
 ```
 root/
@@ -51,8 +50,9 @@ root/
 
 Other functionality is defined in the `:frontend` application inside of Sorin.
 
-The way this extension works
-The `:frontend` application looks at the `settings.js` file and matches up matching "path"'s and overwites/appends/prepends any fallback React component. To do this we populate the components const inside of `settings.js` with the path for the area you want the new custom component to go (See Current customizable areas).
+### The way this extension works
+
+The `:frontend` application looks at the `settings.js` file and matches up matching "paths" and overwites/appends/prepends any fallback React component. To do this we populate the component's const inside of `settings.js` with the path for the area where you want the new custom component to go (see [current customizable areas](#current-customizable-areas)).
 
 ```js
 export const components = [{
@@ -62,7 +62,7 @@ export const components = [{
 }]
 ```
 
-The Imported component is a simple React component that becomes rendered. Because the main application already has React installed and imported, you do not have to include it in a package.json file. If you require or want additional packages. You can create a package.json file at the root of the `js` directory and install any node packages using `npm`.
+The imported component is a simple React component that becomes rendered. Because the main application already has React installed and imported, you do not have to include it in a package.json file. If you require or want additional packages, you can create a `package.json` file at the root of the `js` directory and install any node packages using `npm`.
 
 ### Current customizable areas
 
