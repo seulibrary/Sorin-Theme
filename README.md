@@ -29,6 +29,14 @@ $ mix setup_extension SorinTheme
 
 `setup_extension` is a mix task that runs `npm`, migrates the necessary JavaScript into the frontend application, and compiles `config.json` from `sorin.exs`.
 
+4. Edit the theme files per the [Customization](#customization) section below
+
+5. From the root of the application:
+
+```sh
+$ mix deps.compile && mix setup_extension SorinTheme
+```
+
 **You are now ready to roll.** :red_car:
 
 ## Customization
@@ -41,18 +49,20 @@ The following are the core files of this extension:
 
 ```
 root/
-  assets/
-    js/
-      index.js
-      settings.js
-      styles.scss
+  deps/
+    SorinTheme/
+      assets/
+        js/
+          index.js
+          settings.js
+          styles.scss
 ```
 
 Other functionality is defined in the `:frontend` application inside of Sorin.
 
 ### The way this extension works
 
-The `:frontend` application looks at the `settings.js` file and matches up matching "paths" and overwites/appends/prepends any fallback React component. To do this we populate the component's const inside of `settings.js` with the path for the area where you want the new custom component to go (see [current customizable areas](#current-customizable-areas)).
+The `:frontend` application looks at SorinTheme's `settings.js` file and matches up matching "paths" and overwites/appends/prepends any fallback React component. To do this we populate the component's const inside of `settings.js` with the path for the area where you want the new custom component to go (see [current customizable areas](#current-customizable-areas)).
 
 ```js
 export const components = [{
