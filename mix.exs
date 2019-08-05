@@ -3,8 +3,8 @@ defmodule SorinStedwardsTheme.MixProject do
 
   def project do
     [
-      app: :sorin_stedwards_theme,
-      version: "0.1.0",
+      app: :sorin_theme,
+      version: "0.1.1",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps()
